@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokemon Data</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-y: scroll; /* Enable vertical scrolling */
+      scroll-behavior: smooth; /* Enable smooth scrolling */
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: black;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+
+    .card {
+      width: 200px;
+      margin: 10px;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+      display: none;
+      background-color: #060505;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card.loaded {
+      display: block;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+
+    .para {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pokemons  </h1>
+
+    <div class="box">
+      <input id="searchbar" class="poke-search" onkeyup="search_pokemon()" type="text"
+             name="search" placeholder="Search Pokemon.." style="width: 62%; position: relative; margin-right: 10%;">
+    </div>
+
+    <ul id="pokedex" style="display: flex; flex-wrap: wrap;"></ul>
+  </div>
+
+  <script src="app.js">
+    
+  </script>
+</body>
+</html>
